@@ -1,2 +1,61 @@
-<a href="index.html">Home Page</a>
-<h1> HEllo bitch</h1>
+
+<style>
+    body {
+        text-align: center;
+        padding: 50px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        transition: opacity 0.5s;
+    }
+    
+        body {
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            overflow: hidden; /* Ngăn chặn cuộn trang */
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo ảnh không bị biến dạng và che đậy toàn bộ phần hiển thị */
+            transition: opacity 0.5s;
+        }
+    </style>
+</style>
+</head>
+<body>
+
+<h1>Thay đổi ảnh</h1>
+
+<!-- Nút để thực hiện thay đổi ảnh -->
+<button onclick="changeImage()">Thay đổi ảnh</button>
+
+<!-- Ảnh mặc định -->
+<img id="myImage" src="https://fossbytes.com/wp-content/uploads/2022/05/best-live-wallpaper-apps-for-pc.jpg" alt="Ảnh 1">
+
+<!-- Script để thêm chức năng thay đổi ảnh -->
+<script>
+    function changeImage() {
+        var imgElement = document.getElementById("myImage");
+        var currentSrc = imgElement.src;
+
+        // Kiểm tra đường dẫn ảnh hiện tại và thay đổi thành ảnh mới
+        if (currentSrc.includes("https://fossbytes.com/wp-content/uploads/2022/05/best-live-wallpaper-apps-for-pc.jpg")) {
+            imgElement.src = "https://moewalls.com/wp-content/uploads/2023/03/mechanical-flame-owl-thumb-364x205.jpg";
+        } else {
+            imgElement.src = "https://fossbytes.com/wp-content/uploads/2022/05/best-live-wallpaper-apps-for-pc.jpg";
+        }
+    }
+</script>
+
+</body>
+</html>
